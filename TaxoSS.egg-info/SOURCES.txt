@@ -1,0 +1,14 @@
+README.md
+setup.py
+TaxoSS/__init__.py
+TaxoSS/calculate_IC.py
+TaxoSS/create_card_cache.py
+TaxoSS/functions.py
+TaxoSS.egg-info/PKG-INFO
+TaxoSS.egg-info/SOURCES.txt
+TaxoSS.egg-info/dependency_links.txt
+TaxoSS.egg-info/requires.txt
+TaxoSS.egg-info/top_level.txt
+TaxoSS/data/card_cache.csv
+TaxoSS/data/card_cache_star.csv
+TaxoSS/data/information_content_default.csv
