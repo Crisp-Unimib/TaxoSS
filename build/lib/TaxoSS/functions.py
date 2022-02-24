@@ -7,13 +7,13 @@ from collections import Counter
 import pkgutil
 from io import BytesIO
 
-data = pkgutil.get_data('TaxoVec', "data/card_cache.csv")
+data = pkgutil.get_data('TaxoSS', "data/card_cache.csv")
 df_card_cache = pd.read_csv(BytesIO(data))
 ks = [wn.synset(x.split("(")[1].split(")")[0][1:-1]) for x in df_card_cache['keys'].tolist()]
 vs = df_card_cache['card'].tolist()
 card_cache = {k:v for k,v in zip(ks,vs)}
 
-data_star = pkgutil.get_data('TaxoVec', "data/card_cache_star.csv")
+data_star = pkgutil.get_data('TaxoSS', "data/card_cache_star.csv")
 df_card_cache_star = pd.read_csv(BytesIO(data_star))
 ks_star = [wn.synset(x.split("(")[1].split(")")[0][1:-1]) for x in df_card_cache_star['keys'].tolist()]
 vs_star = df_card_cache_star['card'].tolist()
@@ -296,7 +296,7 @@ def semantic_similarity(w1: str, w2: str, kind: str = 'hss', ic: str = 'data/inf
     returns:
     A float denoting the similarity between the given words
     """
-    data_ic = pkgutil.get_data('TaxoVec', ic)
+    data_ic = pkgutil.get_data('TaxoSS', ic)
     ic_file = pd.read_csv(BytesIO(data_ic))
 
     if kind == 'path_sim':
